@@ -11,8 +11,9 @@ function NavBarMobile() {
 
   {
     closeIcon
-      ? (document.body.style.backgroundColor = "rgba(0, 0, 0, 0.4)")
-      : (document.body.style.backgroundColor = "#fff");
+      ? (document.body.style.background =
+          "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5))")
+      : (document.body.style.background = "#fff");
   }
   return (
     <div className="nav-container">
@@ -36,13 +37,19 @@ function NavBarMobile() {
           <div className={`modal`}>
             <ul>
               <li className="page-link">
-                <NavLink to={"/portfolio"} onClick={() => setCloseIcon(false)}>Portfolio</NavLink>
+                <NavLink to={"/portfolio"} onClick={() => setCloseIcon(false)}>
+                  Portfolio
+                </NavLink>
               </li>
               <li className="page-link">
-                <NavLink to={"/about"} onClick={() => setCloseIcon(false)}>About Us</NavLink>
+                <NavLink to={"/about"} onClick={() => setCloseIcon(false)}>
+                  About Us
+                </NavLink>
               </li>
               <li className="page-link">
-                <NavLink to={"/contact"} onClick={() => setCloseIcon(false)}>contact</NavLink>
+                <NavLink to={"/contact"} onClick={() => setCloseIcon(false)}>
+                  contact
+                </NavLink>
               </li>
             </ul>
           </div>

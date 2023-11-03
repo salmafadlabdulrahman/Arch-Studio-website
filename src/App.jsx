@@ -1,6 +1,7 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import MainLayout from "./pages/MainLayout";
+import Home from "./pages/Home";
 
 function App() {
   const router = createBrowserRouter([
@@ -8,6 +9,10 @@ function App() {
       path: "/",
       element: <MainLayout />,
       children: [
+        {
+          index: true,
+          element: <Home />,
+        },
         {
           path: "/portfolio",
           element: <h1>This is the portfolio page</h1>,

@@ -11,14 +11,19 @@
   top: 70px;
   background-color: #fff;
   width: 95%;
+  z-index: 9999;
 }
 
 .modal ul {
-  list-style: none;
   padding: 2em 1.5em 2em 2em;
   display: flex;
   flex-direction: column;
   gap: 2em;
+}
+
+.modal ul,
+.navbar ul {
+  list-style: none;
 }
 
 .modal ul li {
@@ -32,4 +37,34 @@
   text-decoration: none;
 }
 
+/*Tablet Design*/
+@media (min-width: 760px) /*and (max-width: 1200px)*/ {
+  .navbar {
+    padding: 2.3em 5em;
+    justify-content: flex-start;
+    
+    /*padding: 1em 3em;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3em;*/
+  }
+  .nav-wrapper{
+    display: flex;
+    gap: 4em
+  }
 
+  .navbar ul {
+    display: flex;
+    gap: 3em;
+    padding-top: .8em;
+  }
+
+  .navbar ul li {
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+}
+
+/*Desktop Design*/
+@media (min-width: 1201px) {
+}

@@ -3,25 +3,40 @@ import "../styling/navbar.css";
 
 import { useMediaQuery } from "react-responsive";
 import NavBarMobile from "./NavBarMobile";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   const isDesktop = useMediaQuery({ query: "(min-width: 1201px)" });
   const isTablet = useMediaQuery({
-    query: "(min-width: 741px) and (max-width: 1200px)",
+    query: "(min-width: 760px) and (max-width: 1200px)",
   });
-  const isMobile = useMediaQuery({ query: "(max-width: 740px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 759px)" });
 
   return (
     <div className="nav-container">
-      {!isDesktop && <NavBarMobile />}
-      {isDesktop && (
+      {isMobile && <NavBarMobile />}
+      {!isMobile && (
         <nav className="navbar">
-          <img src={logo} alt="logo" />
-          <ul>
-            <li>Portfolio</li>
-            <li>About Us</li>
-            <li>Contact</li>
-          </ul>
+          <div className="nav-wrapper">
+            <NavLink to={"/"}><img src={logo} alt="logo" /></NavLink>
+            <ul>
+            <li className="page-link">
+                <NavLink to={"/portfolio"}>
+                  Portfolio
+                </NavLink>
+              </li>
+              <li className="page-link">
+                <NavLink to={"/about"}>
+                  About Us
+                </NavLink>
+              </li>
+              <li className="page-link">
+                <NavLink to={"/contact"}>
+                  contact
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </nav>
       )}
     </div>
@@ -29,4 +44,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
