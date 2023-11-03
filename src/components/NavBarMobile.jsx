@@ -4,7 +4,7 @@ import closeMenu from "../assets/icons/icon-close.svg";
 import "../styling/navbar.css";
 import { useContext } from "react";
 import { AppContext } from "../pages/MainLayout";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 function NavBarMobile() {
   const { closeIcon, setCloseIcon } = useContext(AppContext);
@@ -18,7 +18,7 @@ function NavBarMobile() {
   return (
     <div className="nav-container">
       <nav className="navbar">
-        <img src={logo} alt="logo" width={75} />
+        <Link to={"/"}><img src={logo} alt="logo" width={75} /></Link>
         {!closeIcon ? (
           <img
             src={menu}
