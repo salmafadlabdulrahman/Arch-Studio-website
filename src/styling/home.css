@@ -16,7 +16,6 @@
 }
 
 .hero-content {
-  border: 1px solid blueviolet;
   position: relative;
   z-index: 2;
   padding: 5em 2em 4em 2em;
@@ -35,26 +34,101 @@
   margin-top: 1em;
 }
 
+.about-us-btn,
 .btn-dark {
-    background-color: #1b1b1b;
-    border: none;
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-top: 4em;
-    margin-bottom: 2em;
-    padding: 1.5em 2em;
-    font-weight: 600;
-    letter-spacing: 1px;
-    gap: 1em;
-    cursor: pointer;
+  background-color: #1b1b1b;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
-.btn-dark:hover {
-    background-color: #7d828f;
-    transition: all 0.2s ease-in;
+.btn-dark {
+  margin-top: 4em;
+  margin-bottom: 2em;
+  padding: 1.5em 2em;
+  gap: 1em;
+}
+
+.btn-dark:hover,
+.about-us-btn:hover {
+  background-color: #7d828f;
+  transition: all 0.2s ease-in;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+main {
+  margin-top: 4em;
+}
+
+.line {
+  display: block;
+  width: 50px;
+  border-top: 0.12em solid #7d828f;
+  margin: 10px 0;
+}
+
+.main-container {
+  padding: 0 2em;
+}
+
+.welcome-message {
+  padding: 2.5em 0;
+}
+
+.welcome-message h2 {
+  font-size: 2.9em;
+  font-weight: 600;
+}
+
+.welcome-message p {
+  margin-top: 1em;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.teams-wrapper {
+  background-image: url("../assets/home/mobile/image-small-team.jpg");
+  position: relative;
+  background-size: cover;
+  color: white;
+}
+
+.team-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.team-content {
+  position: relative;
+  z-index: 2;
+  padding: 5em 2em 4em 2em;
+}
+
+.team-content h2 {
+  font-size: 3em;
+  font-weight: 600;
+  margin-top: 2em;
+}
+
+.about-us-btn {
+  padding: 1.5em 1.5em;
+  margin-top: 3em;
+  gap: 2em;
+}
+
+.about-us-btn span {
+  margin-left: 8px;
 }

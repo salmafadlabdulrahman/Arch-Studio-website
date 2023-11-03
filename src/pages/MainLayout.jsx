@@ -6,14 +6,12 @@ export const AppContext = createContext();
 
 function MainLayout() {
   const [closeIcon, setCloseIcon] = useState(false);
-  
+
   return (
     <div>
       <AppContext.Provider value={{ closeIcon, setCloseIcon }}>
         <div className="app">
-          <main className="main-content">
-            <NavBar />
-          </main>
+          <NavBar />
         </div>
       </AppContext.Provider>
 
