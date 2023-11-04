@@ -26,7 +26,7 @@ function Home() {
       <div className="hero-wrapper">
         <div className="overlay"></div>
         <div className="hero-content">
-          <h1 className="hero-header">Project Paramour</h1>
+          <h1 className="hero-header">Project <br />Paramour</h1>
           <p>
             Project made for an art museum near Southwest London. Project
             Paramour is a statement of bold, modern architecture.
@@ -97,12 +97,12 @@ function Home() {
                   <ResponsiveImage>
                     <ResponsiveImageSize
                       minWidth={100}
-                      maxWidth={759}
+                      maxWidth={700}
                       path={ProjectDelSolMobileImg}
                     />
 
                     <ResponsiveImageSize
-                      minWidth={760}
+                      minWidth={699}
                       maxWidth={1200}
                       path={ProjectDelSolTabletImg}
                     />
@@ -124,12 +124,12 @@ function Home() {
                   <ResponsiveImage>
                     <ResponsiveImageSize
                       minWidth={100}
-                      maxWidth={759}
+                      maxWidth={700}
                       path={Tower228blMobileImg}
                     />
 
                     <ResponsiveImageSize
-                      minWidth={760}
+                      minWidth={699}
                       maxWidth={1200}
                       path={Tower228blTabletImg}
                     />
@@ -150,14 +150,14 @@ function Home() {
                   <ResponsiveImage>
                     <ResponsiveImageSize
                       minWidth={100}
-                      maxWidth={759}
+                      maxWidth={700}
                       path={ProtoTypeMobileImg}
                     />
 
                     <ResponsiveImageSize
-                      minWidth={760}
+                      minWidth={699}
                       maxWidth={1200}
-                      path={ProjectDelSolTabletImg}
+                      path={ProtoTypeTabletImg}
                     />
 
                     <ResponsiveImageSize
