@@ -304,13 +304,33 @@ footer a {
     margin: 0 auto;
   }
 
+  .featured {
+    width: 80%;
+    margin: 0 auto;
+  }
 
+  .featured-content, .featured-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
 
-  /*.teams-wrapper {
-  background-image: url("../assets/home/mobile/image-small-team.jpg");
-  position: relative;
-  background-size: cover;
-  color: white;
-}*/
-  
+  .featured-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2em;
+    margin-top: 5em;
+  }
+
+  .num-feature {
+    position: absolute;
+    color: #fff;
+    opacity: 0.5;
+    z-index: 3;
+    top: 20px;
+    right: 10px;
+    font-size: 12em;
+    font-weight: 600;
+  }
 }

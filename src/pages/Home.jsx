@@ -101,7 +101,19 @@ function Home() {
         <div className="featured">
           <div className="featured-container">
             <div className="featured-content">
-              <h2>Featured</h2>
+              <div className="featured-header">
+                <h2>Featured</h2>
+                {!isMobile ? (
+                  <Link to={"/portfolio"} className="home-portfolio-link">
+                    <button className="see-all-btn">
+                      See All <ArrowRightIcon width={20} />
+                    </button>
+                  </Link>
+                ) : (
+                  ""
+                )}
+              </div>
+
               <div className="images-container">
                 <div className="img-container">
                   <div className="feature-overlay"></div>
@@ -128,6 +140,8 @@ function Home() {
                     <h3>Project Del Sol</h3>
                     <Link to={`/portfolio`}>View All Projects</Link>
                   </div>
+
+                  {isTablet ? <div className="num-feature">1</div> : "" }
                 </div>
 
                 <div className="img-container">
@@ -154,6 +168,8 @@ function Home() {
                     <h3>228B Tower</h3>
                     <Link to={`/portfolio`}>View All Projects</Link>
                   </div>
+
+                  {isTablet ? <div className="num-feature">2</div> : "" }
                 </div>
 
                 <div className="img-container">
@@ -180,13 +196,19 @@ function Home() {
                     <h3>Le Prototype</h3>
                     <Link to={`/portfolio`}>View All Projects</Link>
                   </div>
+
+                  {isTablet ? <div className="num-feature">3</div> : "" }
                 </div>
 
-                <Link to={"/portfolio"}>
-                  <button className="see-all-btn">
-                    See All <ArrowRightIcon width={20} />
-                  </button>
-                </Link>
+                {isMobile ? (
+                  <Link to={"/portfolio"} className="home-portfolio-link">
+                    <button className="see-all-btn">
+                      See All <ArrowRightIcon width={20} />
+                    </button>
+                  </Link>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           </div>
