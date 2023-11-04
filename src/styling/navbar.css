@@ -65,7 +65,7 @@
 /*Tablet Design*/
 @media (min-width: 759px) /*and (max-width: 1200px) */ {
   .navbar {
-    width: 70%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
     padding-left: 0;

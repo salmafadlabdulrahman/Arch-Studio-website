@@ -1,5 +1,5 @@
 import "../styling/home.css";
-import "../App.css"
+import "../App.css";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import { ResponsiveImage, ResponsiveImageSize } from "react-responsive-image";
@@ -26,13 +26,17 @@ function Home() {
   const isTablet = useMediaQuery({
     query: "(min-width: 760px) and (max-width: 1200px)",
   });
+  const isMobile = useMediaQuery({ query: "(max-width: 759px)" });
 
   return (
     <div className="home">
       <div className="hero-wrapper">
         <div className="overlay"></div>
         <div className="hero-content">
-          <h1 className="hero-header">Project <br />Paramour</h1>
+          <h1 className="hero-header">
+            Project <br />
+            Paramour
+          </h1>
           <p>
             Project made for an art museum near Southwest London. Project
             Paramour is a statement of bold, modern architecture.
@@ -47,8 +51,9 @@ function Home() {
       </div>
 
       <main>
+        {!isMobile ? <h1 className="welcome-header">Welcome</h1> : ""}
         <div className="main-container">
-          <span className="line"></span>
+          {isMobile ? <span className="line"></span> : ""}
 
           <div className="welcome-message">
             <h2>
@@ -177,7 +182,11 @@ function Home() {
                   </div>
                 </div>
 
-                <Link to={"/portfolio"}><button className="see-all-btn">See All <ArrowRightIcon width={20}/></button></Link>
+                <Link to={"/portfolio"}>
+                  <button className="see-all-btn">
+                    See All <ArrowRightIcon width={20} />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -185,15 +194,29 @@ function Home() {
       </main>
 
       <footer>
-        <span><Link className="footer-logo"><img src={logo} className="footer-img" width={75} /></Link></span>
+        <span>
+          <Link className="footer-logo">
+            <img src={logo} className="footer-img" width={75} />
+          </Link>
+        </span>
         <div className="footer-content">
           <ul>
-            <Link to={`/portfolio`}><li>Portfolio</li></Link>
-            <Link to={`/about`}><li>About Us</li></Link>
-            <Link to={`/contact`}><li>Contacts</li></Link>
+            <Link to={`/portfolio`}>
+              <li>Portfolio</li>
+            </Link>
+            <Link to={`/about`}>
+              <li>About Us</li>
+            </Link>
+            <Link to={`/contact`}>
+              <li>Contacts</li>
+            </Link>
           </ul>
 
-          <Link to={`/portfolio`}><button className="btn-dark portfolio">See Our Portfolio <ArrowRightIcon width={20}/></button></Link>
+          <Link to={`/portfolio`}>
+            <button className="btn-dark portfolio">
+              See Our Portfolio <ArrowRightIcon width={20} />
+            </button>
+          </Link>
         </div>
       </footer>
     </div>

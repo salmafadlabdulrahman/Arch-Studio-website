@@ -272,15 +272,45 @@ footer a {
 @media (min-width: 759px) and (max-width: 1200px) {
   .hero-wrapper {
     background-image: url("../assets/home/tablet/image-hero-paramour.jpg");
-    width: 70%;
+    width: 80%;
     height: 100%;
     margin: 0 auto;
-    
   }
 
   .hero-header {
     margin-top: 1.7em;
   }
 
+  .main-container {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .welcome-header {
+    font-size: 9.2em;
+    padding-left: 0.5em;
+    width: 100%;
+    color: #eeeef4;
+  }
+
+  .teams-container {
+    margin-top: 5em;
+  }
+
+  .teams-wrapper {
+    background-image: url("../assets/home/tablet/image-small-team.jpg");
+    width: 80%;
+    margin: 0 auto;
+  }
+
+
+
+  /*.teams-wrapper {
+  background-image: url("../assets/home/mobile/image-small-team.jpg");
+  position: relative;
+  background-size: cover;
+  color: white;
+}*/
   
 }
