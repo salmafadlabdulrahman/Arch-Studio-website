@@ -1,4 +1,5 @@
 import "../styling/home.css";
+import "../App.css"
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import { ResponsiveImage, ResponsiveImageSize } from "react-responsive-image";
@@ -19,8 +20,13 @@ import ProtoTypeTabletImg from "../assets/portfolio/tablet/image-prototype.jpg";
 import ProjectDelSolDesktopImg from "../assets/portfolio/desktop/image-del-sol.jpg";
 import Tower228blDesktopImg from "../assets/portfolio/desktop/image-228b.jpg";
 import ProtoTypeDesktopImg from "../assets/portfolio/desktop/image-prototype.jpg";
+import { useMediaQuery } from "react-responsive";
 
 function Home() {
+  const isTablet = useMediaQuery({
+    query: "(min-width: 760px) and (max-width: 1200px)",
+  });
+
   return (
     <div className="home">
       <div className="hero-wrapper">

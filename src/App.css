@@ -1,11 +1,27 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /*overflow-x: scroll;*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*overflow-x: scroll;*/
 }
 
 body {
-    min-height: 100vh;
-    font-family: 'League Spartan', sans-serif;
+  min-height: 100vh;
+  font-family: "League Spartan", sans-serif;
+}
+
+.app {
+  /*border: 1px solid blue;*/
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 759px) {
+  .navigation,
+  .content {
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

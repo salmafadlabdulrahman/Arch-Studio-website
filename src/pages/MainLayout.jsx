@@ -11,11 +11,15 @@ function MainLayout() {
     <div>
       <AppContext.Provider value={{ closeIcon, setCloseIcon }}>
         <div className="app">
-          <NavBar />
+          <div className="navigation">
+            <NavBar />
+          </div>
+
+          <div className="content">
+            <Outlet />
+          </div>
         </div>
       </AppContext.Provider>
-
-      <Outlet />
     </div>
   );
 }
