@@ -115,7 +115,7 @@ function Home() {
 
                   <div className="img-description">
                     <h3>Project Del Sol</h3>
-                    <Link>View All Projects</Link>
+                    <Link to={`/portfolio`}>View All Projects</Link>
                   </div>
                 </div>
 
@@ -141,7 +141,7 @@ function Home() {
                   </ResponsiveImage>
                   <div className="img-description">
                     <h3>228B Tower</h3>
-                    <Link>View All Projects</Link>
+                    <Link to={`/portfolio`}>View All Projects</Link>
                   </div>
                 </div>
 
@@ -167,7 +167,7 @@ function Home() {
                   </ResponsiveImage>
                   <div className="img-description">
                     <h3>Le Prototype</h3>
-                    <Link>View All Projects</Link>
+                    <Link to={`/portfolio`}>View All Projects</Link>
                   </div>
                 </div>
 
@@ -179,15 +179,15 @@ function Home() {
       </main>
 
       <footer>
-        <span><Link className="footer-logo"><img src={logo} className="footer-img" width={90} /></Link></span>
+        <span><Link className="footer-logo"><img src={logo} className="footer-img" width={75} /></Link></span>
         <div className="footer-content">
           <ul>
-            <Link><li>Portfolio</li></Link>
-            <Link><li>About Us</li></Link>
-            <Link><li>Contacts</li></Link>
+            <Link to={`/portfolio`}><li>Portfolio</li></Link>
+            <Link to={`/about`}><li>About Us</li></Link>
+            <Link to={`/contact`}><li>Contacts</li></Link>
           </ul>
 
-          <Link><button>See Our Portfolio <ArrowRightIcon width={20}/></button></Link>
+          <Link to={`/portfolio`}><button className="btn-dark portfolio">See Our Portfolio <ArrowRightIcon width={20}/></button></Link>
         </div>
       </footer>
     </div>
