@@ -111,7 +111,7 @@ main {
   z-index: 1;
 }
 
-.team-content {
+.team-content{
   position: relative;
   z-index: 2;
   padding: 5em 2em 4em 2em;
@@ -127,8 +127,124 @@ main {
   padding: 1.5em 1.5em;
   margin-top: 3em;
   gap: 2em;
+  margin-bottom: 3em;
 }
 
 .about-us-btn span {
   margin-left: 8px;
 }
+
+.images-container img {
+  display: block;
+  width: 100%;
+}
+
+.featured-container {
+  padding: 1.5em;
+}
+
+.featured-content {
+  margin-top: 3em;
+}
+
+.featured-content h2 {
+  font-size: 3em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.images-container {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-description {
+  position: absolute;
+  bottom: 20px;
+  color: white;
+  z-index: 2;
+  line-height: 1.5;
+  padding-left: 1em;
+}
+
+.img-description h3 {
+  font-weight: 500;
+  font-size: 1.4em;
+}
+
+.img-description a {
+  color: white;
+  font-weight: 200;
+  font-size: 1.2em;
+}
+
+.feature-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.see-all-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  border: none;
+  background-color: #1b1b1b;
+  color: white;
+  padding: 1.7em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100%;
+}
+
+footer {
+  border: 1px solid blue;
+  margin-top: 5em;
+  position: relative;
+}
+
+footer span {
+  background-color: #1b1b1b;
+  padding: 2.3em 0.1em;
+  display: block;
+  width: 130px;
+  height: 120px;
+  margin: 0 auto;
+  z-index: 1;
+  
+}
+
+footer span img {
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(101%) contrast(102%);
+}
+
+footer a {
+  color: #60636D;
+}
+
+/*.footer-content {
+  width: 100%;
+  background-color: #eee4f4;
+  color: #60636D;
+  z-index: -1;
+  position: absolute;
+  bottom: 0px;
+  padding: 2em;
+}*/

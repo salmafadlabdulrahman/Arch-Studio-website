@@ -1,6 +1,24 @@
 import "../styling/home.css";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
+import { ResponsiveImage, ResponsiveImageSize } from "react-responsive-image";
+
+//Images
+import logo from "../assets/logo.svg";
+//Mobile
+import ProjectDelSolMobileImg from "../assets/portfolio/mobile/image-del-sol.jpg";
+import Tower228blMobileImg from "../assets/portfolio/mobile/image-228b.jpg";
+import ProtoTypeMobileImg from "../assets/portfolio/mobile/image-prototype.jpg";
+
+//Tablet
+import ProjectDelSolTabletImg from "../assets/portfolio/tablet/image-del-sol.jpg";
+import Tower228blTabletImg from "../assets/portfolio/tablet/image-228b.jpg";
+import ProtoTypeTabletImg from "../assets/portfolio/tablet/image-prototype.jpg";
+
+//Desktop
+import ProjectDelSolDesktopImg from "../assets/portfolio/desktop/image-del-sol.jpg";
+import Tower228blDesktopImg from "../assets/portfolio/desktop/image-228b.jpg";
+import ProtoTypeDesktopImg from "../assets/portfolio/desktop/image-prototype.jpg";
 
 function Home() {
   return (
@@ -59,17 +77,121 @@ function Home() {
                 Small team,
                 <br /> big ideas
               </h2>
-              <button className="about-us-btn">
-                <span>About Us</span>
-                <ArrowRightIcon width={25} />
-              </button>
+              <Link to={"/about"}>
+                <button className="about-us-btn">
+                  <span>About Us</span>
+                  <ArrowRightIcon width={25} />
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="featured">
+          <div className="featured-container">
+            <div className="featured-content">
+              <h2>Featured</h2>
+              <div className="images-container">
+                <div className="img-container">
+                  <div className="feature-overlay"></div>
+                  <ResponsiveImage>
+                    <ResponsiveImageSize
+                      minWidth={100}
+                      maxWidth={759}
+                      path={ProjectDelSolMobileImg}
+                    />
+
+                    <ResponsiveImageSize
+                      minWidth={760}
+                      maxWidth={1200}
+                      path={ProjectDelSolTabletImg}
+                    />
+
+                    <ResponsiveImageSize
+                      minWidth={1201}
+                      path={ProjectDelSolDesktopImg}
+                    />
+                  </ResponsiveImage>
+
+                  <div className="img-description">
+                    <h3>Project Del Sol</h3>
+                    <Link>View All Projects</Link>
+                  </div>
+                </div>
+
+                <div className="img-container">
+                  <div className="feature-overlay"></div>
+                  <ResponsiveImage>
+                    <ResponsiveImageSize
+                      minWidth={100}
+                      maxWidth={759}
+                      path={Tower228blMobileImg}
+                    />
+
+                    <ResponsiveImageSize
+                      minWidth={760}
+                      maxWidth={1200}
+                      path={Tower228blTabletImg}
+                    />
+
+                    <ResponsiveImageSize
+                      minWidth={1201}
+                      path={Tower228blDesktopImg}
+                    />
+                  </ResponsiveImage>
+                  <div className="img-description">
+                    <h3>228B Tower</h3>
+                    <Link>View All Projects</Link>
+                  </div>
+                </div>
+
+                <div className="img-container">
+                  <div className="feature-overlay"></div>
+                  <ResponsiveImage>
+                    <ResponsiveImageSize
+                      minWidth={100}
+                      maxWidth={759}
+                      path={ProtoTypeMobileImg}
+                    />
+
+                    <ResponsiveImageSize
+                      minWidth={760}
+                      maxWidth={1200}
+                      path={ProjectDelSolTabletImg}
+                    />
+
+                    <ResponsiveImageSize
+                      minWidth={1201}
+                      path={ProtoTypeDesktopImg}
+                    />
+                  </ResponsiveImage>
+                  <div className="img-description">
+                    <h3>Le Prototype</h3>
+                    <Link>View All Projects</Link>
+                  </div>
+                </div>
+
+                <Link to={"/portfolio"}><button className="see-all-btn">See All <ArrowRightIcon width={20}/></button></Link>
+              </div>
             </div>
           </div>
         </div>
       </main>
+
+      <footer>
+        <span><Link className="footer-logo"><img src={logo} className="footer-img" width={90} /></Link></span>
+        <div className="footer-content">
+          <ul>
+            <Link><li>Portfolio</li></Link>
+            <Link><li>About Us</li></Link>
+            <Link><li>Contacts</li></Link>
+          </ul>
+
+          <Link><button>See Our Portfolio <ArrowRightIcon width={20}/></button></Link>
+        </div>
+      </footer>
     </div>
   );
 }
 
 export default Home;
-/*btn btn-dark about-us-btn */
