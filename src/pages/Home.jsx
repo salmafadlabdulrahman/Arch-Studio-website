@@ -6,41 +6,93 @@ import { ResponsiveImage, ResponsiveImageSize } from "react-responsive-image";
 
 //Images
 import logo from "../assets/logo.svg";
-//Mobile
+
+//Mobile version
 import ProjectDelSolMobileImg from "../assets/portfolio/mobile/image-del-sol.jpg";
 import Tower228blMobileImg from "../assets/portfolio/mobile/image-228b.jpg";
 import ProtoTypeMobileImg from "../assets/portfolio/mobile/image-prototype.jpg";
 
-//Tablet
+//Tablet version
 import ProjectDelSolTabletImg from "../assets/portfolio/tablet/image-del-sol.jpg";
 import Tower228blTabletImg from "../assets/portfolio/tablet/image-228b.jpg";
 import ProtoTypeTabletImg from "../assets/portfolio/tablet/image-prototype.jpg";
 
-//Desktop
+//Desktop version
 import ProjectDelSolDesktopImg from "../assets/portfolio/desktop/image-del-sol.jpg";
 import Tower228blDesktopImg from "../assets/portfolio/desktop/image-228b.jpg";
 import ProtoTypeDesktopImg from "../assets/portfolio/desktop/image-prototype.jpg";
+
+//Hero Images
+import paramourDesktop from "../assets/home/desktop/image-hero-paramour.jpg";
+import seraphDesktop from "../assets/home/desktop/image-hero-seraph.jpg";
+import fedralDesktop from "../assets/home/desktop/image-hero-federal.jpg";
+import TrinityDesktop from "../assets/home/desktop/image-hero-trinity.jpg";
+
+//react imports
 import { useMediaQuery } from "react-responsive";
+import { useEffect, useState } from "react";
+
+const heroContent = [
+  {
+    id: 1,
+    title: "Project Paramour",
+    description:
+      "Project made for an art museum near Southwest London. Project Paramour is a statement of bold, modern architecture.",
+    imgPath: paramourDesktop,
+  },
+  {
+    id: 2,
+    title: "Seraph Station",
+    description:
+      "The Seraph Station project challenged us to design a unique station that would transport people through time. The result is a fresh and futuristic model inspired by space stations.",
+    imgPath: seraphDesktop,
+  },
+  {
+    id: 3,
+    title: "Federal II Tower",
+    description:
+      "A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.",
+    imgPath: fedralDesktop,
+  },
+  {
+    id: 4,
+    title: "Trinity Bank Tower",
+    description:
+      "Trinity Bank challenged us to make a concept for a 84 story building located in the middle of a city with a high earthquake frequency. For this project we used curves to blend design and stability to meet our objectives.",
+    imgPath: TrinityDesktop,
+  },
+];
 
 function Home() {
+  const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
   const isTablet = useMediaQuery({
-    query: "(min-width: 760px) and (max-width: 1200px)",
+    query: "(min-width: 760px) and (max-width: 1025px)",
   });
   const isMobile = useMediaQuery({ query: "(max-width: 759px)" });
+  const [heroInfo, setHeroInfo] = useState(1);
+  const [board, setBoard] = useState(heroContent[0]);
+
+  useEffect(() => {
+    heroContent.filter((board) => {
+      if (board.id === heroInfo) {
+        setBoard(board);
+      }
+    });
+  }, [heroInfo]);
 
   return (
     <div className="home">
-      <div className="hero-wrapper">
+      <div
+        className="hero-wrapper"
+        style={{
+          backgroundImage: `url(${board.imgPath})`,
+        }}
+      >
         <div className="overlay"></div>
+
         <div className="hero-content">
-          <h1 className="hero-header">
-            Project <br />
-            Paramour
-          </h1>
-          <p>
-            Project made for an art museum near Southwest London. Project
-            Paramour is a statement of bold, modern architecture.
-          </p>
+          <h1 className="hero-header">{board.title}</h1>
+          <p>{board.description}</p>
 
           <Link to={"/portfolio"}>
             <button className="btn btn-dark">
@@ -48,6 +100,27 @@ function Home() {
             </button>
           </Link>
         </div>
+
+        {isDesktop ? (
+          <div className="hero-nav">
+            <ul>
+              {heroContent.map((item, index) => (
+                <li
+                  key={index}
+                  onClick={() => setHeroInfo(item.id)}
+                  style={{
+                    backgroundColor: heroInfo === item.id ? "#000" : "#eeeef4",
+                    color: heroInfo === item.id ? "#fff" : "#000",
+                  }}
+                >
+                  0{item.id}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
 
       <main>
@@ -216,12 +289,6 @@ function Home() {
       </main>
 
       <footer>
-        {/*<span>
-          <Link className="footer-logo">
-            <img src={logo} className="footer-img" width={75} />
-          </Link>
-                </span> */}
-
         <div className="footer-content">
           <span>
             <Link className="footer-logo">

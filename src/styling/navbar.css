@@ -63,7 +63,7 @@
 }
 
 /*Tablet Design*/
-@media (min-width: 759px) /*and (max-width: 1200px) */ {
+@media (min-width: 759px)  {
   .navbar {
     width: 80%;
     height: 100%;
@@ -91,5 +91,25 @@
 }
 
 /*Desktop Design*/
-@media (min-width: 1201px) {
+@media (min-width: 1025px) {
+  .navbar {
+    width: 80%;
+  }
+  .vertical-decoration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+    height: 40%;
+    position: absolute;
+    width: 10%;
+    top: 0;
+    left: 10px;
+  }
+  
+  .line-decoration {
+    border-left: 1px solid #7d828f;
+    height: 70px;
+  }
+  
 }

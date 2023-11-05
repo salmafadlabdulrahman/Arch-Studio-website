@@ -7,7 +7,7 @@ import NavBarMobile from "./NavBarMobile";
 import { NavLink, useLocation } from "react-router-dom";
 
 function NavBar() {
-  const isDesktop = useMediaQuery({ query: "(min-width: 1201px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
   const isTablet = useMediaQuery({
     query: "(min-width: 760px) and (max-width: 1200px)",
   });
@@ -27,6 +27,7 @@ function NavBar() {
                 : location.pathname.split("/")[1]}
             </div>
           </div>
+
           <nav className="navbar">
             <div className="nav-wrapper">
               <NavLink to={"/"}>
