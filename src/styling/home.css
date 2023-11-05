@@ -112,7 +112,7 @@ main {
   z-index: 1;
 }
 
-.team-content{
+.team-content {
   position: relative;
   z-index: 2;
   padding: 5em 2em 4em 2em;
@@ -238,7 +238,8 @@ footer span img {
 }
 
 .footer-img {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(101%) contrast(102%);
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(230deg)
+    brightness(101%) contrast(102%);
 }
 
 .footer-content {
@@ -247,11 +248,11 @@ footer span img {
 }
 
 footer a {
-  color: #60636D;
+  color: #60636d;
 }
 
 .footer-content ul {
- text-align: center;
+  text-align: center;
 }
 
 .footer-content ul li {
@@ -309,7 +310,8 @@ footer a {
     margin: 0 auto;
   }
 
-  .featured-content, .featured-container {
+  .featured-content,
+  .featured-container {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -332,5 +334,46 @@ footer a {
     right: 10px;
     font-size: 12em;
     font-weight: 600;
+  }
+
+  footer {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    align-items: center;
+  }
+
+  footer span {
+    position: static;
+    transform: none;
+    margin-left: 0;
+  }
+
+  footer span img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .footer-content ul {
+    list-style: none;
+    display: flex;
+    padding-right: 1em;
+    gap: 2em;
+  }
+
+  .footer-content ul li {
+    margin-top: 0;
+    font-size: 1.1em;
+  }
+
+  .btn-dark.portfolio {
+    margin-top: 0;
+    margin-right: 2em;
   }
 }

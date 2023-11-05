@@ -141,7 +141,7 @@ function Home() {
                     <Link to={`/portfolio`}>View All Projects</Link>
                   </div>
 
-                  {isTablet ? <div className="num-feature">1</div> : "" }
+                  {isTablet ? <div className="num-feature">1</div> : ""}
                 </div>
 
                 <div className="img-container">
@@ -169,7 +169,7 @@ function Home() {
                     <Link to={`/portfolio`}>View All Projects</Link>
                   </div>
 
-                  {isTablet ? <div className="num-feature">2</div> : "" }
+                  {isTablet ? <div className="num-feature">2</div> : ""}
                 </div>
 
                 <div className="img-container">
@@ -197,7 +197,7 @@ function Home() {
                     <Link to={`/portfolio`}>View All Projects</Link>
                   </div>
 
-                  {isTablet ? <div className="num-feature">3</div> : "" }
+                  {isTablet ? <div className="num-feature">3</div> : ""}
                 </div>
 
                 {isMobile ? (
@@ -216,12 +216,18 @@ function Home() {
       </main>
 
       <footer>
-        <span>
+        {/*<span>
           <Link className="footer-logo">
             <img src={logo} className="footer-img" width={75} />
           </Link>
-        </span>
+                </span> */}
+
         <div className="footer-content">
+          <span>
+            <Link className="footer-logo">
+              <img src={logo} className="footer-img" width={75} />
+            </Link>
+          </span>
           <ul>
             <Link to={`/portfolio`}>
               <li>Portfolio</li>
