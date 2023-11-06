@@ -53,24 +53,3 @@ function NavBar() {
 }
 
 export default NavBar;
-
-{
-  /*<div className="line page-title">
-            <div className="line"></div>
-            <div className="page-name">HOME</div>
-          </div> */
-}
-
-{
-  /*<div class="decoration">
-  <div class="line"></div>
-  <div class="text">HOME</div>
-</div> */
-}
-
-{
-  /*<div className="line page-title">
-            <div className="line"></div>
-            <div className="page-name">{location.pathname === "/" ? "HOME" : location.pathname.split("/")[1]}</div>
-          </div> */
-}
