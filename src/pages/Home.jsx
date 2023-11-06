@@ -2,7 +2,7 @@ import "../styling/home.css";
 import "../App.css";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
-import { ResponsiveImage, ResponsiveImageSize } from "react-responsive-image";
+//import { ResponsiveImage, ResponsiveImageSize } from "react-responsive-image";
 
 //Images
 import logo from "../assets/logo.svg";
@@ -213,24 +213,25 @@ function Home() {
                 <div className="images-container">
                   <div className="img-container">
                     <div className="feature-overlay"></div>
-                    <ResponsiveImage>
-                      <ResponsiveImageSize
-                        minWidth={100}
-                        maxWidth={700}
-                        path={ProjectDelSolMobileImg}
+                    <picture className="hero-img-wrapper">
+                      <source
+                        media="(min-width: 699px) and (max-width: 1025px)"
+                        srcSet={ProjectDelSolTabletImg}
+                        className="header-img"
                       />
 
-                      <ResponsiveImageSize
-                        minWidth={699}
-                        maxWidth={1200}
-                        path={ProjectDelSolTabletImg}
+                      <source
+                        media="(min-width: 1025px)"
+                        srcSet={ProjectDelSolDesktopImg}
+                        className="header-img"
                       />
 
-                      <ResponsiveImageSize
-                        minWidth={1201}
-                        path={ProjectDelSolDesktopImg}
+                      <img
+                        src={ProjectDelSolMobileImg}
+                        alt="two people standing in front of an image"
+                        className="header-img"
                       />
-                    </ResponsiveImage>
+                    </picture>
 
                     <div className="img-description">
                       <h3>Project Del Sol</h3>
@@ -242,24 +243,27 @@ function Home() {
 
                   <div className="img-container">
                     <div className="feature-overlay"></div>
-                    <ResponsiveImage>
-                      <ResponsiveImageSize
-                        minWidth={100}
-                        maxWidth={700}
-                        path={Tower228blMobileImg}
+                    <picture className="hero-img-wrapper">
+                      <source
+                        media="(min-width: 699px) and (max-width: 1025px)"
+                        srcSet={Tower228blTabletImg}
+                        className="header-img"
                       />
 
-                      <ResponsiveImageSize
-                        minWidth={699}
-                        maxWidth={1200}
-                        path={Tower228blTabletImg}
+                      <source
+                        media="(min-width: 1025px)"
+                        srcSet={Tower228blDesktopImg}
+                        className="header-img"
                       />
 
-                      <ResponsiveImageSize
-                        minWidth={1201}
-                        path={Tower228blDesktopImg}
+                      <img
+                        src={Tower228blMobileImg}
+                        alt="two people standing in front of an image"
+                        className="header-img"
                       />
-                    </ResponsiveImage>
+                    </picture>
+                    
+                    
                     <div className="img-description">
                       <h3>228B Tower</h3>
                       <Link to={`/portfolio`}>View All Projects</Link>
@@ -270,24 +274,28 @@ function Home() {
 
                   <div className="img-container">
                     <div className="feature-overlay"></div>
-                    <ResponsiveImage>
-                      <ResponsiveImageSize
-                        minWidth={100}
-                        maxWidth={700}
-                        path={ProtoTypeMobileImg}
+                    
+
+                    <picture className="hero-img-wrapper">
+                      <source
+                        media="(min-width: 699px) and (max-width: 1025px)"
+                        srcSet={ProtoTypeTabletImg}
+                        className="header-img"
                       />
 
-                      <ResponsiveImageSize
-                        minWidth={699}
-                        maxWidth={1200}
-                        path={ProtoTypeTabletImg}
+                      <source
+                        media="(min-width: 1025px)"
+                        srcSet={ProtoTypeDesktopImg}
+                        className="header-img"
                       />
 
-                      <ResponsiveImageSize
-                        minWidth={1201}
-                        path={ProtoTypeDesktopImg}
+                      <img
+                        src={ProtoTypeMobileImg}
+                        alt="two people standing in front of an image"
+                        className="header-img"
                       />
-                    </ResponsiveImage>
+                    </picture>
+                    
                     <div className="img-description">
                       <h3>Le Prototype</h3>
                       <Link to={`/portfolio`}>View All Projects</Link>
@@ -311,7 +319,7 @@ function Home() {
           </div>
         </main>
 
-        <footer>
+        {/*<footer>
           <div className="footer-content">
             <span>
               <Link className="footer-logo">
@@ -336,10 +344,69 @@ function Home() {
               </button>
             </Link>
           </div>
-        </footer>
+        </footer>*/}
       </div>
     </>
   );
 }
 
 export default Home;
+
+/*<ResponsiveImage>
+                    <ResponsiveImageSize
+                        minWidth={100}
+                        maxWidth={700}
+                        path={ProjectDelSolMobileImg}
+                      />
+
+                      <ResponsiveImageSize
+                        minWidth={699}
+                        maxWidth={1200}
+                        path={ProjectDelSolTabletImg}
+                      />
+
+                      <ResponsiveImageSize
+                        minWidth={1025}
+                        path={ProjectDelSolDesktopImg}
+                      />
+                    </ResponsiveImage> */
+
+
+/*<ResponsiveImage>
+                      <ResponsiveImageSize
+                        minWidth={100}
+                        maxWidth={700}
+                        path={Tower228blMobileImg}
+                      />
+
+                      <ResponsiveImageSize
+                        minWidth={699}
+                        maxWidth={1200}
+                        path={Tower228blTabletImg}
+                      />
+
+                      <ResponsiveImageSize
+                        minWidth={1025}
+                        path={Tower228blDesktopImg}
+                      />
+                    </ResponsiveImage> */
+
+
+/*<ResponsiveImage>
+                      <ResponsiveImageSize
+                        minWidth={100}
+                        maxWidth={700}
+                        path={ProtoTypeMobileImg}
+                      />
+
+                      <ResponsiveImageSize
+                        minWidth={699}
+                        maxWidth={1200}
+                        path={ProtoTypeTabletImg}
+                      />
+
+                      <ResponsiveImageSize
+                        minWidth={1025}
+                        path={ProtoTypeDesktopImg}
+                      />
+                    </ResponsiveImage> */

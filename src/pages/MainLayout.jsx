@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import { createContext, useState } from "react";
+import Footer from "../components/Footer";
 
 export const AppContext = createContext();
 
@@ -17,6 +18,10 @@ function MainLayout() {
 
           <div className="content">
             <Outlet />
+          </div>
+
+          <div className="footer-section">
+            <Footer />
           </div>
         </div>
       </AppContext.Provider>
