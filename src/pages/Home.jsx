@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 //import { ResponsiveImage, ResponsiveImageSize } from "react-responsive-image";
 
 //Images
-import logo from "../assets/logo.svg";
 import welcomeImg from "../assets/home/desktop/image-welcome.jpg";
 
 //Mobile version
@@ -324,62 +323,3 @@ function Home() {
 }
 
 export default Home;
-
-/*<ResponsiveImage>
-                    <ResponsiveImageSize
-                        minWidth={100}
-                        maxWidth={700}
-                        path={ProjectDelSolMobileImg}
-                      />
-
-                      <ResponsiveImageSize
-                        minWidth={699}
-                        maxWidth={1200}
-                        path={ProjectDelSolTabletImg}
-                      />
-
-                      <ResponsiveImageSize
-                        minWidth={1025}
-                        path={ProjectDelSolDesktopImg}
-                      />
-                    </ResponsiveImage> */
-
-
-/*<ResponsiveImage>
-                      <ResponsiveImageSize
-                        minWidth={100}
-                        maxWidth={700}
-                        path={Tower228blMobileImg}
-                      />
-
-                      <ResponsiveImageSize
-                        minWidth={699}
-                        maxWidth={1200}
-                        path={Tower228blTabletImg}
-                      />
-
-                      <ResponsiveImageSize
-                        minWidth={1025}
-                        path={Tower228blDesktopImg}
-                      />
-                    </ResponsiveImage> */
-
-
-/*<ResponsiveImage>
-                      <ResponsiveImageSize
-                        minWidth={100}
-                        maxWidth={700}
-                        path={ProtoTypeMobileImg}
-                      />
-
-                      <ResponsiveImageSize
-                        minWidth={699}
-                        maxWidth={1200}
-                        path={ProtoTypeTabletImg}
-                      />
-
-                      <ResponsiveImageSize
-                        minWidth={1025}
-                        path={ProtoTypeDesktopImg}
-                      />
-                    </ResponsiveImage> */

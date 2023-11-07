@@ -3,9 +3,9 @@ const projects = [
       name: "Seraph Station",
       dateCompleted: "September 2019",
       image: {
-        desktop: "./src/assets/portfolio/desktop/image-seraph.jpg",
-        tablet: "./src/assets/portfolio/tablet/image-seraph.jpg",
-        mobile: "./src/assets/portfolio/mobile/image-seraph.jpg",
+        desktop: "/assets/portfolio/desktop/image-seraph.jpg",
+        tablet: "/assets/portfolio/tablet/image-seraph.jpg",
+        mobile: "/assets/portfolio/mobile/image-seraph.jpg",
       },
     },
     {
