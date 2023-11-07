@@ -2,6 +2,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "./App.css";
 import MainLayout from "./pages/MainLayout";
 import Home from "./pages/Home";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   const router = createBrowserRouter([
@@ -15,7 +16,7 @@ function App() {
         },
         {
           path: "/portfolio",
-          element: <h1>This is the portfolio page</h1>,
+          element: <Portfolio />,
         },
         {
           path: "/contact",

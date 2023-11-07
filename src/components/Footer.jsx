@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import logo from "../assets/logo.svg";
 import { ArrowRightIcon } from "@heroicons/react/24/solid"; 
+import "../styling/footer.css"
 
 function Footer() {
   return (
@@ -9,7 +10,7 @@ function Footer() {
           <div className="footer-content">
             <span>
               <Link className="footer-logo">
-                <img src={logo} className="footer-img" width={75} />
+                <img src={logo} className="footer-img" width={70} />
               </Link>
             </span>
             <ul>

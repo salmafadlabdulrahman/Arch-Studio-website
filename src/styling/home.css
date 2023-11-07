@@ -2,7 +2,6 @@
   position: relative;
   background-size: cover;
   color: white;
-  will-change: transform
 }
 
 .overlay {
@@ -210,66 +209,6 @@ main {
   width: 100%;
 }
 
-footer {
-  margin-top: 5em;
-  position: relative;
-  background-color: #eeeef4;
-  padding-bottom: 3em;
-  padding-top: 3em;
-  display: flex;
-  flex-direction: column;
-}
-
-footer span {
-  background-color: #1b1b1b;
-  padding: 2.3em 0.1em;
-  width: 130px;
-  height: 120px;
-  margin: 0 auto;
-  position: absolute;
-  left: 50%;
-  bottom: 84%;
-  transform: translateX(-50%);
-}
-
-footer span img {
-  display: block;
-  margin: 0 auto;
-}
-
-.footer-img {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(230deg)
-    brightness(101%) contrast(102%);
-}
-
-.footer-content {
-  display: inline-block;
-  vertical-align: top;
-}
-
-footer a {
-  color: #60636d;
-}
-
-.footer-content ul {
-  text-align: center;
-}
-
-.footer-content ul li {
-  margin-top: 2em;
-  font-size: 1.2em;
-  font-weight: 600;
-}
-
-.footer-content ul li:hover {
-  color: #7d828f;
-}
-
-.btn-dark.portfolio {
-  margin: 0 auto;
-  margin-top: 4em;
-}
-
 @media (min-width: 759px) {
   .hero-wrapper {
     width: 80%;
@@ -333,62 +272,21 @@ footer a {
     font-size: 12em;
     font-weight: 600;
   }
-
-  footer {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    padding: 0;
-  }
-
-  .footer-content {
-    display: flex;
-    flex-direction: row;
-    gap: 3em;
-    align-items: center;
-  }
-
-  footer span {
-    position: static;
-    transform: none;
-    margin-left: 0;
-  }
-
-  footer span img {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .footer-content ul {
-    list-style: none;
-    display: flex;
-    padding-right: 1em;
-    gap: 2em;
-  }
-
-  .footer-content ul li {
-    margin-top: 0;
-    font-size: 1.1em;
-  }
-
-  .btn-dark.portfolio {
-    margin-top: 0;
-    margin-right: 2em;
-  }
 }
 
 @media (min-width: 1025px) {
   .hero-wrapper {
-    width: 80%;
+    width: 70%;
   }
 
-  /*.teams-wrapper {
+  .teams-wrapper {
     width: 70%;
   }
 
   .featured {
     width: 70%;
     margin: 0 auto;
-  }*/
+  }
 
   .hero-content {
     padding: 4em 2em 4em 5em;
@@ -470,5 +368,13 @@ footer a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .teams-wrapper {
+    background-image: url("../assets/home/desktop/image-small-team.jpg");
+  }
+
+  .team-content {
+    padding-left: 10em;
   }
 }

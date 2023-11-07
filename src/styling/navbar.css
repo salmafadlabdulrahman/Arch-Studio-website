@@ -93,7 +93,7 @@
 /*Desktop Design*/
 @media (min-width: 1025px) {
   .navbar {
-    width: 80%;
+    width: 70%;
   }
   .vertical-decoration {
     display: flex;

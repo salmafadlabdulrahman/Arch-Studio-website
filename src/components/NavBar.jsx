@@ -19,9 +19,9 @@ function NavBar() {
       {isMobile && <NavBarMobile />}
       {!isMobile && (
         <>
-          <div className="vertical-decoration">
+          <div className="vertical-decoration" style={{gap: location.pathname === "/" ? "5em" : "8em"}}>
             <div className="line-decoration"></div>
-            <div className="page-name">
+            <div className="page-name" >
               {location.pathname === "/"
                 ? "HOME"
                 : location.pathname.split("/")[1]}
