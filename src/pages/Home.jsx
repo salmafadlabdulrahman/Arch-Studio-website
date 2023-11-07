@@ -5,28 +5,28 @@ import { Link } from "react-router-dom";
 //import { ResponsiveImage, ResponsiveImageSize } from "react-responsive-image";
 
 //Images
-import welcomeImg from "../assets/home/desktop/image-welcome.jpg";
+import welcomeImg from "/assets/home/desktop/image-welcome.jpg";
 
 //Mobile version
-import ProjectDelSolMobileImg from "../assets/portfolio/mobile/image-del-sol.jpg";
-import Tower228blMobileImg from "../assets/portfolio/mobile/image-228b.jpg";
-import ProtoTypeMobileImg from "../assets/portfolio/mobile/image-prototype.jpg";
+import ProjectDelSolMobileImg from "/assets/portfolio/mobile/image-del-sol.jpg";
+import Tower228blMobileImg from "/assets/portfolio/mobile/image-228b.jpg";
+import ProtoTypeMobileImg from "/assets/portfolio/mobile/image-prototype.jpg";
 
 //Tablet version
-import ProjectDelSolTabletImg from "../assets/portfolio/tablet/image-del-sol.jpg";
-import Tower228blTabletImg from "../assets/portfolio/tablet/image-228b.jpg";
-import ProtoTypeTabletImg from "../assets/portfolio/tablet/image-prototype.jpg";
+import ProjectDelSolTabletImg from "/assets/portfolio/tablet/image-del-sol.jpg";
+import Tower228blTabletImg from "/assets/portfolio/tablet/image-228b.jpg";
+import ProtoTypeTabletImg from "/assets/portfolio/tablet/image-prototype.jpg";
 
 //Desktop version
-import ProjectDelSolDesktopImg from "../assets/portfolio/desktop/image-del-sol.jpg";
-import Tower228blDesktopImg from "../assets/portfolio/desktop/image-228b.jpg";
-import ProtoTypeDesktopImg from "../assets/portfolio/desktop/image-prototype.jpg";
+import ProjectDelSolDesktopImg from "/assets/portfolio/desktop/image-del-sol.jpg";
+import Tower228blDesktopImg from "/assets/portfolio/desktop/image-228b.jpg";
+import ProtoTypeDesktopImg from "/assets/portfolio/desktop/image-prototype.jpg";
 
 //Hero Images
-import paramourDesktop from "../assets/home/desktop/image-hero-paramour.jpg";
-import seraphDesktop from "../assets/home/desktop/image-hero-seraph.jpg";
-import fedralDesktop from "../assets/home/desktop/image-hero-federal.jpg";
-import TrinityDesktop from "../assets/home/desktop/image-hero-trinity.jpg";
+import paramourDesktop from "/assets/home/desktop/image-hero-paramour.jpg";
+import seraphDesktop from "/assets/home/desktop/image-hero-seraph.jpg";
+import fedralDesktop from "/assets/home/desktop/image-hero-federal.jpg";
+import TrinityDesktop from "/assets/home/desktop/image-hero-trinity.jpg";
 
 //react imports
 import { useMediaQuery } from "react-responsive";

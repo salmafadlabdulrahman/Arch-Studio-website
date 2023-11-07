@@ -1,4 +1,4 @@
-import logo from "../assets/logo.svg";
+import logo from "/assets/logo.svg";
 import "../styling/navbar.css";
 import "../App.css";
 

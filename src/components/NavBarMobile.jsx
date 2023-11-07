@@ -1,6 +1,6 @@
-import logo from "../assets/logo.svg";
-import menu from "../assets/icons/icon-hamburger.svg";
-import closeMenu from "../assets/icons/icon-close.svg";
+import logo from "/assets/logo.svg";
+import menu from "/assets/icons/icon-hamburger.svg";
+import closeMenu from "/assets/icons/icon-close.svg";
 import "../styling/navbar.css";
 import { useContext } from "react";
 import { AppContext } from "../pages/MainLayout";
