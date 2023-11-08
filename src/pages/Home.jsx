@@ -2,7 +2,6 @@ import "../styling/home.css";
 import "../App.css";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
-//import { ResponsiveImage, ResponsiveImageSize } from "react-responsive-image";
 
 //Images
 import welcomeImg from "/assets/home/desktop/image-welcome.jpg";

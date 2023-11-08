@@ -3,6 +3,7 @@ import "./App.css";
 import MainLayout from "./pages/MainLayout";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
+import About from "./pages/About";
 
 function App() {
   const router = createBrowserRouter([
@@ -19,12 +20,12 @@ function App() {
           element: <Portfolio />,
         },
         {
-          path: "/contact",
-          element: <h1>This is the contact page</h1>,
+          path: "/about",
+          element: <About />,
         },
         {
-          path: "/about",
-          element: <h1>This is the about us page</h1>,
+          path: "/contact",
+          element: <h1>Contact Page</h1>,
         },
       ],
     },

@@ -1,0 +1,41 @@
+.about {
+  /*margin: 0 auto;*/
+}
+
+.about-wrapper {
+  position: relative;
+}
+
+.about-wrapper img {
+  width: 100%;
+  /*eight: auto;*/
+}
+
+.about-team-container {
+  position: absolute;
+  background-color: #fff;
+  color: #000;
+  z-index: 2;
+  top: 90%;
+  /*right: 30px;*/
+  width: 90%;
+  
+  line-height: 1.1;
+}
+
+.about-team-content {
+    padding: 3em 1em;
+    
+}
+
+.about-team-content h1 {
+  font-size: 2.7em;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.about-team-content p {
+    margin-top: 1.9em;
+    font-weight: 300;
+    font-size: 1.2em;
+}

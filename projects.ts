@@ -108,8 +108,5 @@ const projects = [
       },
     },
   ];
-
-  //import something from "./src/assets/portfolio/desktop"
-  //import something from "/public/assets/portfolio/desktop/image-paramour.jpg"
   
   export default projects;
