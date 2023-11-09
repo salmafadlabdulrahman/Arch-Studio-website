@@ -86,7 +86,7 @@
   width: 100%;
 }
 
-.leader h3{
+.leader h3 {
   margin-top: 1em;
   letter-spacing: 1px;
 }
@@ -94,15 +94,118 @@
 .leader h4 {
   font-weight: 300;
   font-size: 1.2em;
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 
-.social-media-container{
+.social-media-container {
   margin-top: 1.3em;
   display: flex;
-  gap: .8em;
+  gap: 0.8em;
 }
 
 .social-media-container .icon {
   font-size: 1.7em;
+}
+
+@media (min-width: 523px) and (max-width: 758px) {
+  .about-team-content {
+    padding-bottom: 0em;
+  }
+
+  .heritage-section-container {
+    padding-top: 0;
+    margin-top: 15em;
+  }
+}
+
+/*Tablet Design*/
+@media (min-width: 759px) {
+  .about-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .about-hero-container {
+    position: relative;
+  }
+
+  .about-hero-container .hero-img {
+    background-image: url("../../public/assets/about/image-hero.jpg");
+    height: 40em;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .hero-img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+  }
+
+  .hero-content {
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    background-color: #fff;
+  }
+
+  .hero-content h1 {
+    top: -65px;
+    text-align: center;
+    width: 90%;
+    position: absolute;
+    font-size: 9em;
+    color: #eeeef4;
+    letter-spacing: 2px;
+  }
+
+  .hero-content h2 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-top: 1em;
+  }
+
+  .hero-content p {
+    margin-top: 2em;
+  }
+
+  .heritage-section-container {
+    margin-top: 0;
+    padding-top: 7em;
+  }
+
+  .leaders-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8em;
+  }
+
+  .leader {
+    width: 45%;
+  }
+
+  footer {
+    width: 100%;
+  }
+
+  /*.leader img {
+    border: 
+  }*/
+
+  /*.about-hero-container img {
+    width: 100%;
+  }*/
+
+  /*.about-background {
+    background-image: url("../../public/assets/about/image-hero.jpg");
+    object-fit: contain;
+  }*/
+
+  .about-team-content {
+    right: 0;
+  }
 }
