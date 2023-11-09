@@ -36,8 +36,10 @@ function About() {
             ) : (
               <div className="about-hero-container">
                 {/*<img src={heroImg} />*/}
-                <div className="hero-img"></div>
-                <div className="hero-img-overlay"></div>
+                <div className="hero-img-container">
+                  <div className="hero-img"></div>
+                  <div className="hero-img-overlay"></div>
+                </div>
 
                 <div className="hero-content">
                   <h1>About</h1>
