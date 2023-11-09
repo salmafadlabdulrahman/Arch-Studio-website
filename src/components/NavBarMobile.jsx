@@ -8,6 +8,8 @@ import { NavLink, Link } from "react-router-dom";
 
 function NavBarMobile() {
   const { closeIcon, setCloseIcon } = useContext(AppContext);
+  
+  closeIcon ? document.body.classList.add('nav-open') : document.body.classList.remove('nav-open');
 
   {
     closeIcon

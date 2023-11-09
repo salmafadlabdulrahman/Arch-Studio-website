@@ -1,41 +1,61 @@
 .about {
-  /*margin: 0 auto;*/
-}
-
-.about-wrapper {
-  position: relative;
-}
-
-.about-wrapper img {
-  width: 100%;
-  /*eight: auto;*/
+  min-height: 100vh;
 }
 
 .about-team-container {
-  position: absolute;
-  background-color: #fff;
-  color: #000;
-  z-index: 2;
-  top: 90%;
-  /*right: 30px;*/
-  width: 90%;
-  
-  line-height: 1.1;
+  position: relative;
+}
+
+.about-background {
+  background-image: url("../assets/about/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 18em;
+  position: relative;
 }
 
 .about-team-content {
-    padding: 3em 1em;
-    
+  position: absolute;
+  top: 250px;
+  width: 90%;
+  background-color: #fff;
+  padding: 3em 0em 2.7em 1.8em;
 }
 
 .about-team-content h1 {
   font-size: 2.7em;
   font-weight: 600;
-  letter-spacing: 1px;
 }
 
 .about-team-content p {
-    margin-top: 1.9em;
-    font-weight: 300;
-    font-size: 1.2em;
+  padding-top: 2em;
+  font-size: 1.2em;
+  padding-bottom: 3em;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.heritage-section-container {
+  position: relative;
+  z-index: 2;
+  margin-top: 20em;
+  padding-top: 3em;
+}
+
+.heritage-content-container {
+  padding-left: 1.8em;
+}
+
+.heritage-content-container h1 {
+  font-size: 2.7em;
+  font-weight: 600;
+  margin-top: 1em;
+}
+
+.heritage-content-container p {
+  margin-top: 2em;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.2;
+  padding-right: 1em;
 }
