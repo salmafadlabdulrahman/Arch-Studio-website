@@ -192,19 +192,6 @@
     width: 100%;
   }
 
-  /*.leader img {
-    border: 
-  }*/
-
-  /*.about-hero-container img {
-    width: 100%;
-  }*/
-
-  /*.about-background {
-    background-image: url("../../public/assets/about/image-hero.jpg");
-    object-fit: contain;
-  }*/
-
   .about-team-content {
     right: 0;
   }
@@ -213,17 +200,12 @@
 @media (min-width: 1025px) {
   .about {
     width: 70%;
-    /*border: 1px solid blueviolet;*/
     margin: 0 auto;
   }
   .about-container {
-    /*border: 1px solid midnightblue;*/
     width: 100%;
     margin: 0;
   }
-  /*.about-hero-container {
-    border: 1px solid blue;
-  }*/
   .hero-img-container {
     width: 50%;
   }
@@ -250,7 +232,49 @@
 
   .hero-content p {
     font-size: 1.2em;
-    /*border: 1px solid midnightblue;*/
     width: 100%;
+  }
+
+  .heritage-section-container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .heritage-body {
+    width: 90%;
+  }
+
+  .heritage-section-container img {
+    width: 40%;
+    height: 40%;
+  }
+
+  .leaders-section-container {
+    margin-top: 7em;
+  }
+
+  .leaders-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .leaders-wrapper {
+    justify-content: end;
+  }
+
+  .leader {
+    margin-top: 0;
+    width: 40%;
+  }
+
+  .leader h4 {
+    margin-bottom: 3em;
+  }
+
+  footer {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10em;
   }
 }

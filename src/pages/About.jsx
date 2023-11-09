@@ -7,10 +7,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useMediaQuery } from "react-responsive";
 import heroImg from "../../public/assets/about/image-hero.jpg";
+import heritageImg from "../../public/assets/about/image-heritage.jpg";
 
 function About() {
   const { closeIcon } = useContext(AppContext);
   const isMobile = useMediaQuery({ query: "(max-width: 759px)" });
+  const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
   return (
     <>
       <div className="about">
@@ -87,6 +89,7 @@ function About() {
                 </p>
               </div>
             </div>
+            {isDesktop ? <img src={heritageImg} /> : ""}
           </div>
 
           <div className="leaders-section-container">
@@ -101,10 +104,14 @@ function About() {
                     <img src={leader.path} />
                     <h3>{leader.name}</h3>
                     <h4>{leader.title}</h4>
-                    <div className="social-media-container">
-                      <FontAwesomeIcon icon={faLinkedin} className="icon" />
-                      <FontAwesomeIcon icon={faXTwitter} className="icon" />
-                    </div>
+                    {!isDesktop ? (
+                      <div className="social-media-container">
+                        <FontAwesomeIcon icon={faLinkedin} className="icon" />
+                        <FontAwesomeIcon icon={faXTwitter} className="icon" />
+                      </div>
+                    ) : (
+                      ""
+                    )}
                   </div>
                 ))}
               </div>
