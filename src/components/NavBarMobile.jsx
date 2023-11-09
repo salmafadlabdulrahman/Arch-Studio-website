@@ -12,11 +12,10 @@ function NavBarMobile() {
   closeIcon ? document.body.classList.add('nav-open') : document.body.classList.remove('nav-open');
 
   {
-    closeIcon
-      ? (document.body.style.background =
-          "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5))")
-      : (document.body.style.background = "#fff");
+    closeIcon ? (document.body.style.background = "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5))") : (document.body.style.background = "#fff");
+    
   }
+  
   return (
     <div className="nav-container">
       <nav className="navbar">

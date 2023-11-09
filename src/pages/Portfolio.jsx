@@ -1,7 +1,7 @@
 import { useMediaQuery } from "react-responsive";
 import "../styling/portfolio.css";
 
-const portfolioImg = [
+/*const portfolioImg = [
   "image-228b",
   "image-del-sol",
   "image-edelweiss",
@@ -14,7 +14,7 @@ const portfolioImg = [
   "image-seraph",
   "image-sxiv",
   "image-trinity",
-];
+];*/
 
 import projectsData from "../../projects";
 

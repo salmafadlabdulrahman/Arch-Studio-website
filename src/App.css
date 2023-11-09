@@ -11,7 +11,6 @@ body {
 }
 
 .app {
-  /*border: 1px solid blue;*/
   display: flex;
   flex-direction: column;
   position: relative;
@@ -29,6 +28,4 @@ body {
     width: 100%;
     box-sizing: border-box;
   }
-
-  
 }

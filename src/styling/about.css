@@ -52,10 +52,57 @@
   margin-top: 1em;
 }
 
-.heritage-content-container p {
+.heritage-body {
   margin-top: 2em;
+}
+
+.heritage-content-container p {
   font-size: 1.2em;
   font-weight: 300;
   line-height: 1.2;
   padding-right: 1em;
+  margin-bottom: 1em;
+}
+
+.leaders-section-container {
+  margin-top: 3em;
+}
+
+.leaders-content {
+  padding: 1.4em;
+}
+
+.leader {
+  margin-top: 2em;
+}
+
+.leaders-content h1 {
+  font-size: 2.8em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.leader img {
+  width: 100%;
+}
+
+.leader h3{
+  margin-top: 1em;
+  letter-spacing: 1px;
+}
+
+.leader h4 {
+  font-weight: 300;
+  font-size: 1.2em;
+  margin-top: .5em;
+}
+
+.social-media-container{
+  margin-top: 1.3em;
+  display: flex;
+  gap: .8em;
+}
+
+.social-media-container .icon {
+  font-size: 1.7em;
 }
