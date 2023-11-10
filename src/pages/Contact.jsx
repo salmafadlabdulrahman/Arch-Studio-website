@@ -89,7 +89,7 @@ function Contact() {
         </div>
 
         {/*<div className="map-container">*/}
-          <Map/>
+          
         {/*</div>*/}
 
         <div className="contactUs-container">
