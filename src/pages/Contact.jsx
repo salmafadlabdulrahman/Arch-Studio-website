@@ -88,9 +88,8 @@ function Contact() {
           </div>
         </div>
 
-        {/*<div className="map-container">*/}
-          {/*<Map/> */}
-        {/*</div>*/}
+        
+          <Map/>
 
         <div className="contactUs-container">
           <h2>
