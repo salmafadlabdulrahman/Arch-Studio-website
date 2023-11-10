@@ -5,16 +5,34 @@ import { useContext } from "react";
 import { AppContext } from "./MainLayout";
 import { useMediaQuery } from "react-responsive";
 import Map from "../components/Map";
+/*import { useEffect } from "react";
+import { useRef } from "react";
 
 
-
-/*import { MapContainer } from 'react-leaflet/MapContainer'
-import { TileLayer } from 'react-leaflet/TileLayer'
-import { useMap } from 'react-leaflet/hooks'*/
+import { Map, TileLayer } from 'leaflet';*/
 
 function Contact() {
   const { closeIcon } = useContext(AppContext);
   const isMobile = useMediaQuery({ query: "(max-width: 759px)" });
+
+  
+  /*const mapRef = useRef(null);
+  useEffect(() => {
+    // Create the map instance
+    const map = new Map(mapRef.current);
+
+    // Set the initial view and zoom level
+    map.setView([35.8061609, -88.6195667], 13);
+
+    // Add a tile layer to the map
+    const tileLayer = new TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    tileLayer.addTo(map);
+  }, []);
+
+  const handleClick = () => {
+    // Fly to the specified coordinates
+    mapRef.current.flyTo([35.8061609, -88.6195667], 5);
+  };*/
   return (
     <div className="contact">
       <div className="contact-container">
@@ -70,7 +88,7 @@ function Contact() {
               <p>Address: 1892 Chenoweth Drive TN</p>
               <p>Phone: 123-456-3541</p>
             </div>
-            <Link>
+            <Link >
               View on Map <ArrowRightIcon width={25} />
             </Link>
           </div>
@@ -89,7 +107,7 @@ function Contact() {
         </div>
 
         
-          <Map/>
+          <Map  />
 
         <div className="contactUs-container">
           <h2>
