@@ -3,7 +3,7 @@ import "leaflet/dist/leaflet.css";
 import "../styling/contact.css";
 
 import L from "leaflet";
-import MarkerIcon from "./marker-icon.png";
+import MarkerIcon from "../assets/contact/Map_marker.svg.png";
 
 function Map() {
   const customIcon = L.icon({
