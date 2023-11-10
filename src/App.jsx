@@ -4,6 +4,7 @@ import MainLayout from "./pages/MainLayout";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   const router = createBrowserRouter([
@@ -25,7 +26,7 @@ function App() {
         },
         {
           path: "/contact",
-          element: <h1>Contact Page</h1>,
+          element: <Contact />,
         },
       ],
     },

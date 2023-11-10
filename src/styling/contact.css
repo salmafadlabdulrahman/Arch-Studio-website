@@ -1,0 +1,140 @@
+.contact {
+  min-height: 100vh;
+}
+
+.contact-project-container {
+  position: relative;
+}
+
+.contact-background {
+  background-image: url(/src/assets/contact/mobile/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 16em;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.contact-project-content {
+  position: absolute;
+  top: 220px;
+  z-index: 22;
+  width: 90%;
+  background-color: #fff;
+  padding: 3em 2em 2.7em 1.8em;
+}
+
+.contact-project-content h1 {
+  font-size: 2.7em;
+  font-weight: 600;
+}
+
+.contact-project-content p {
+  padding-top: 2em;
+  font-size: 1.2em;
+  padding-bottom: 3em;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.contact-details-container {
+  position: relative;
+  margin-top: 30em;
+  padding-top: 1em;
+  padding-left: 1.8em;
+}
+
+.contact-details-container h1 {
+    font-size: 3em;
+    font-weight: 600;
+    padding-right: 1em;
+}
+
+.office-info {
+    margin-top: 2em;
+}
+
+.office-info h3 {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.office-info p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 1em;
+    font-size: 1.1em;
+}
+
+.office-info a {
+    color: #000;
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+    font-weight: 600;
+    gap: 1.5em;
+}
+
+.contactUs-container {
+    padding-left: 1.8em;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.contactUs-container h2 {
+    font-size: 3em;
+    font-weight: 600;
+    padding-right: 1em;
+}
+
+.contact-fields {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1.8em;
+    margin-top: 1.3em;
+}
+
+.contact-fields input, textarea {
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    margin-top: 1em;
+    padding-bottom: 1.5em;
+    border-bottom: 1px solid #000;
+    outline: none;
+}
+
+
+
+.contact-fields input::placeholder, textarea::placeholder {
+    font-weight: 500;
+    color: #c8ccd8;
+    padding-left: 1em;  
+}
+
+textarea::placeholder {
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.contactUs-container button {
+    background-color: #000;
+    color: white;
+    border: none;
+    /*margin-top: 2em;*/
+    width: 80px;
+    height: 70px;
+    align-self: flex-end;
+}
+
