@@ -56,9 +56,11 @@ function Contact() {
           )}
         </div>
 
+        {!isMobile ? <span className="line"></span> : ""}
         <div className="contact-details-container">
-          <span className="line"></span>
-          <h1>Contact Details</h1>
+          <h1>
+            Contact Details
+          </h1>
           <div className="office-container">
             <div className="office-info">
               <h3>Main Office</h3>
@@ -89,7 +91,10 @@ function Contact() {
   </div>*/}
 
         <div className="contactUs-container">
-          <h2>Connect <br />with us</h2>
+          <h2>
+            Connect <br />
+            with us
+          </h2>
           <div className="contact-fields">
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Email" />

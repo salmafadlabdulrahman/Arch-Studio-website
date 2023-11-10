@@ -223,3 +223,77 @@ textarea::placeholder {
     justify-content: space-between;
   }
 }
+
+@media (min-width: 1025px) {
+  .contact {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .contact-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact-container .line {
+    margin-top: 7em;
+  }
+
+  .contact-img-container {
+    width: 54%;
+  }
+
+  .contact-hero-img-overlay {
+    width: 54%;
+  }
+
+  .contact-body {
+    top: 150px;
+    left: 40%;
+    padding-right: 1em;
+  }
+
+  .contact-body h1 {
+    text-align: unset;
+    font-size: 13em;
+    top: -100px;
+    left: -150px;
+    position: absolute;
+    font-weight: 600;
+  }
+  .contact-body .line {
+    display: block;
+    margin-top: 3em;
+  }
+
+  .contact-body p {
+    font-size: 1.2em;
+    width: 100%;
+    padding-right: 2em;
+  }
+
+  .contact-details-container {
+    display: flex;
+    gap: 2em;
+    padding: 0;
+  }
+
+  .office-container {
+    display: inline;
+  }
+
+  .contact-details-container h1 {
+    padding-top: 0.5em;
+    padding-right: 2em;
+    margin: 0;
+  }
+
+  .contactUs-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact-fields {
+    width: 65%;
+  }
+}
