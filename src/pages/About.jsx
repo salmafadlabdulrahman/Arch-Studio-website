@@ -36,7 +36,6 @@ function About() {
               </div>
             ) : (
               <div className="about-hero-container">
-                {/*<img src={heroImg} />*/}
                 <div className="hero-img-container">
                   <div className="hero-img"></div>
                   <div className="hero-img-overlay"></div>
