@@ -4,13 +4,17 @@ import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { useContext } from "react";
 import { AppContext } from "./MainLayout";
 import { useMediaQuery } from "react-responsive";
-//import contactBackground from "../assets/contact/mobile/image-hero.jpg"
-//import mapImage from "../assets/contact/mobile/image-map.png";
+import Map from "../components/Map";
+
+
+
+/*import { MapContainer } from 'react-leaflet/MapContainer'
+import { TileLayer } from 'react-leaflet/TileLayer'
+import { useMap } from 'react-leaflet/hooks'*/
 
 function Contact() {
   const { closeIcon } = useContext(AppContext);
   const isMobile = useMediaQuery({ query: "(max-width: 759px)" });
-  const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
   return (
     <div className="contact">
       <div className="contact-container">
@@ -58,9 +62,7 @@ function Contact() {
 
         {!isMobile ? <span className="line"></span> : ""}
         <div className="contact-details-container">
-          <h1>
-            Contact Details
-          </h1>
+          <h1>Contact Details</h1>
           <div className="office-container">
             <div className="office-info">
               <h3>Main Office</h3>
@@ -86,9 +88,9 @@ function Contact() {
           </div>
         </div>
 
-        {/*<div className="map-container">
-          <img src={mapImage} alt="" />
-  </div>*/}
+        {/*<div className="map-container">*/}
+          <Map/>
+        {/*</div>*/}
 
         <div className="contactUs-container">
           <h2>

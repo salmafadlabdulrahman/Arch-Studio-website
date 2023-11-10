@@ -137,6 +137,10 @@ textarea::placeholder {
   align-self: flex-end;
 }
 
+.map-container {
+  margin-top: 4em;
+}
+
 @media (min-width: 514px) and (max-width: 757px) {
   .contact-project-content {
     padding-bottom: 0em;
