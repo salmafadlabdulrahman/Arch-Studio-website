@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import "../styling/contact.css";
 
 function Map() {
+
   return (
     <div className="map-container">
       <MapContainer
