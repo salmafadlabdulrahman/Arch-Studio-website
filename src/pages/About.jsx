@@ -6,8 +6,7 @@ import leaderssData from "../../leadersData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { useMediaQuery } from "react-responsive";
-import heroImg from "../../public/assets/about/image-hero.jpg";
-import heritageImg from "../../public/assets/about/image-heritage.jpg";
+import heritageImg from "/assets/about/image-heritage.jpg";
 
 function About() {
   const { closeIcon } = useContext(AppContext);
@@ -43,7 +42,7 @@ function About() {
                   <div className="hero-img-overlay"></div>
                 </div>
 
-                <div className="hero-content">
+                <div className="hero-body">
                   <h1>About</h1>
                   <span className="line"></span>
                   <h2>

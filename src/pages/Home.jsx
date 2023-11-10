@@ -79,6 +79,7 @@ function Home() {
     });
   }, [heroInfo]);
 
+  //${board.imgPath}
   return (
     <>
       <div className="home">
