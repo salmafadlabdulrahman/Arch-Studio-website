@@ -1,38 +1,40 @@
 import { Link } from "react-router-dom";
 import "../styling/contact.css";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "./MainLayout";
 import { useMediaQuery } from "react-responsive";
 import Map from "../components/Map";
-/*import { useEffect } from "react";
-import { useRef } from "react";
-
-
-import { Map, TileLayer } from 'leaflet';*/
 
 function Contact() {
   const { closeIcon } = useContext(AppContext);
   const isMobile = useMediaQuery({ query: "(max-width: 759px)" });
+  const [fields, setFields] = useState([
+    { id: "name", value: "" },
+    { id: "email", value: "" },
+    { id: "message", value: "" },
+  ]);
+  const [sendMessage, setSendMessage] = useState(false);
 
-  
-  /*const mapRef = useRef(null);
-  useEffect(() => {
-    // Create the map instance
-    const map = new Map(mapRef.current);
+  const updateForm = (event, fieldId) => {
+    const updatedFields = fields.map((field) => {
+      if (field.id === fieldId) {
+        return { ...field, value: event.target.value };
+      }
+      return field;
+    });
+    setFields(updatedFields);
+  };
 
-    // Set the initial view and zoom level
-    map.setView([35.8061609, -88.6195667], 13);
+  const checkFields = (e) => {
+    setSendMessage(true);
+    fields.map((field) => {
+      if (field.value === "") {
+        e.preventDefault();
+      }
+    });
+  };
 
-    // Add a tile layer to the map
-    const tileLayer = new TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    tileLayer.addTo(map);
-  }, []);
-
-  const handleClick = () => {
-    // Fly to the specified coordinates
-    mapRef.current.flyTo([35.8061609, -88.6195667], 5);
-  };*/
   return (
     <div className="contact">
       <div className="contact-container">
@@ -88,7 +90,7 @@ function Contact() {
               <p>Address: 1892 Chenoweth Drive TN</p>
               <p>Phone: 123-456-3541</p>
             </div>
-            <Link >
+            <Link>
               View on Map <ArrowRightIcon width={25} />
             </Link>
           </div>
@@ -106,8 +108,9 @@ function Contact() {
           </div>
         </div>
 
-        
-          <Map  />
+        <div className="location-map" id="somthing">
+          <Map />
+        </div>
 
         <div className="contactUs-container">
           <h2>
@@ -115,13 +118,74 @@ function Contact() {
             with us
           </h2>
           <div className="contact-fields">
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
-            <textarea type="text" placeholder="Message" cols={30} rows={4} />
+            <form onSubmit={checkFields}>
+              <label htmlFor="name"></label>
+              {sendMessage && fields[0].value === "" ? (
+                <span className="error-msg">Can't be empty</span>
+              ) : (
+                ""
+              )}
+              <input
+                type="text"
+                placeholder="Name"
+                name="name"
+                onChange={(event) => updateForm(event, "name")}
+                style={{
+                  borderBottom: sendMessage
+                    ? fields[0].value === ""
+                      ? "1px solid red"
+                      : "1px solid green"
+                    : "1px solid #000",
+                }}
+              />
 
-            <button>
-              <ArrowRightIcon width={30} />
-            </button>
+              <label htmlFor="email"></label>
+              {sendMessage && fields[0].value === "" ? (
+                <span className="error-msg">Can't be empty</span>
+              ) : (
+                ""
+              )}
+              <input
+                type="email"
+                placeholder="Email"
+                name="email"
+                onChange={(event) => updateForm(event, "email")}
+                style={{
+                  borderBottom: sendMessage
+                    ? fields[1].value === ""
+                      ? "1px solid red"
+                      : "1px solid green"
+                    : "1px solid #000",
+                }}
+              />
+
+              <label htmlFor="message"></label>
+
+              {sendMessage && fields[0].value === "" ? (
+                <span className="error-msg">Can't be empty</span>
+              ) : (
+                ""
+              )}
+              <textarea
+                type="text"
+                placeholder="Message"
+                cols={30}
+                rows={4}
+                name="message"
+                onChange={(event) => updateForm(event, "message")}
+                style={{
+                  borderBottom: sendMessage
+                    ? fields[2].value === ""
+                      ? "1px solid red"
+                      : "1px solid green"
+                    : "1px solid #000",
+                }}
+              />
+
+              <button type="submit" onClick={(e) => checkFields(e)}>
+                <ArrowRightIcon width={30} />
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -130,4 +194,3 @@ function Contact() {
 }
 
 export default Contact;
-/*style={{backgroundImage: `url(${contactBackground})`}} */
