@@ -25,7 +25,7 @@ The Email is not formatted correctly should show "Please use a valid email addre
 
 ### Links
 
-- Solution URL: [solution URL here](https://github.com/salmafadlabdulrahman/task-management-app)
+- Solution URL: [solution URL here](https://github.com/salmafadlabdulrahman/Arch-Studio-website/tree/main)
 - Live Site URL: [live site URL here](https://arch-studio-website-ruby.vercel.app/)
 
 ## My process
@@ -37,5 +37,6 @@ The Email is not formatted correctly should show "Please use a valid email addre
 - Flexbox
 - Mobile-first workflow
 - JavaScript
+- TypeScript
 - React - JS library
 - Leaflet JS library
