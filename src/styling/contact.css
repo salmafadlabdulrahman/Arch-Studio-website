@@ -164,6 +164,11 @@ textarea::placeholder {
     margin: 0 auto;
   }
 
+  .contact-container .line {
+    margin-top: 7em;
+    margin-left: 2em;
+  }
+
   .hero-container {
     position: relative;
   }

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "../styling/about.css";
 import { AppContext } from "./MainLayout";
 
@@ -10,8 +10,18 @@ import heritageImg from "/assets/about/image-heritage.jpg";
 
 function About() {
   const { closeIcon } = useContext(AppContext);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const isMobile = useMediaQuery({ query: "(max-width: 759px)" });
   const isDesktop = useMediaQuery({ query: "(min-width: 1025px)" });
+
+  const handleImageHover = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleImageLeave = () => {
+    setHoveredIndex(null);
+  };
+
   return (
     <>
       <div className="about">
@@ -98,8 +108,46 @@ function About() {
               </h1>
               <div className="leaders-wrapper">
                 {leaderssData.map((leader, index) => (
-                  <div className="leader" key={index}>
-                    <img src={leader.path} />
+                  <div
+                    className="leader"
+                    key={index}
+                    onMouseEnter={() => handleImageHover(index)}
+                    onMouseLeave={handleImageLeave}
+                  >
+                    {hoveredIndex === index ? (
+                      <div className="hover-situation">
+                        <div className="leader-img-overlay">
+                          <span>
+                            <a
+                              href="https://www.linkedin.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FontAwesomeIcon
+                                icon={faLinkedin}
+                                className="icon"
+                              />
+                            </a>
+                          </span>
+                          <span>
+                            <a
+                              href="https://twitter.com/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FontAwesomeIcon
+                                icon={faXTwitter}
+                                className="icon"
+                              />
+                            </a>
+                          </span>
+                        </div>
+                        <img src={leader.path} className="leader-img" />
+                      </div>
+                    ) : (
+                      <img src={leader.path} className="leader-img" />
+                    )}
+
                     <h3>{leader.name}</h3>
                     <h4>{leader.title}</h4>
                     {!isDesktop ? (

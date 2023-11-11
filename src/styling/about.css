@@ -6,8 +6,6 @@
   position: relative;
 }
 
-/*../assets/about/mobile/image-hero.jpg*/
-
 .about-background {
   background-image: url("../assets/about/mobile/image-hero.jpg");
   background-repeat: no-repeat;
@@ -76,6 +74,50 @@
 
 .leader {
   margin-top: 2em;
+  transition: all 0.5s ease;
+}
+
+.leader:hover {
+  transition: all 1s ease-out;
+}
+
+.leader-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-situation {
+  position: relative;
+  display: inline-block;
+}
+
+.leader-img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.hover-situation:hover .leader-img-overlay {
+  opacity: 1;
+}
+
+.leader-img-overlay span {
+  display: block;
+  font-size: 3em;
+  color: white;
+  cursor: pointer;
+}
+
+.leader-img-overlay span a {
+  color: inherit;
 }
 
 .leaders-content h1 {
